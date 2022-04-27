@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('add_student', [StudentController::class, 'create']);
-Route::post('add_student', [StudentController::class, 'store']);
-Route::get('add_student', [StudentController::class, 'index']);
-Route::get('edit-student/{id}', [StudentController::class, 'edit']);
-Route::put('update-student/{id}', [StudentController::class, 'update']);
-Route::get('delete-student/{id}', [StudentController::class, 'destroy']);
+Route::get('/', [StudentController::class, 'create']);
+Route::post('/', [StudentController::class, 'store']);
+Route::get('/', [StudentController::class, 'index']);
+Route::get('/{id}', [StudentController::class, 'edit']);
+Route::put('/{id}', [StudentController::class, 'update']);
+Route::get('/{id}', [StudentController::class, 'destroy']);
